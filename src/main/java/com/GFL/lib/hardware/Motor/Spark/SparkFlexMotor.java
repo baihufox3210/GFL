@@ -102,8 +102,8 @@ public class SparkFlexMotor implements GenericMotor {
     }
 
     @Override
-    public void set(double present) {
-        motor.set(present);
+    public void set(double percent) {
+        motor.set(percent);
     }
 
     @Override
