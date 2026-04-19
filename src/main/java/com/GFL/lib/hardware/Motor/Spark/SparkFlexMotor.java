@@ -5,7 +5,7 @@ import com.GFL.lib.hardware.Encoder.Spark.SparkFlexAbsoluteEncoder;
 import com.GFL.lib.hardware.Encoder.Spark.SparkFlexRelativeEncoder;
 import com.GFL.lib.hardware.config.MotorConfig;
 import com.GFL.lib.hardware.config.MotorConfig.NeutralMode;
-import com.GFL.lib.hardware.config.MotorConfig.SensorType;
+import com.GFL.lib.hardware.config.MotorConfig.SensorSource;
 import com.GFL.lib.hardware.interfaces.GenericEncoder;
 import com.GFL.lib.hardware.interfaces.GenericMotor;
 import com.revrobotics.PersistMode;
@@ -36,7 +36,7 @@ public class SparkFlexMotor implements GenericMotor {
         motor = new SparkFlex(id, MotorType.kBrushless);
         closedLoopController = motor.getClosedLoopController();
 
-        if(motorConfig.encoderConfig.sensorType == SensorType.INTERNAL) encoder = new SparkFlexRelativeEncoder(motor);
+        if(motorConfig.encoderConfig.sensorSource == SensorSource.INTERNAL) encoder = new SparkFlexRelativeEncoder(motor);
         else encoder = new SparkFlexAbsoluteEncoder(motor);
     }
 
@@ -77,7 +77,7 @@ public class SparkFlexMotor implements GenericMotor {
 
         FeedbackSensor feedbackSensor;
 
-        if(motorConfig.encoderConfig.sensorType == SensorType.INTERNAL) feedbackSensor = FeedbackSensor.kPrimaryEncoder;
+        if(motorConfig.encoderConfig.sensorSource == SensorSource.INTERNAL) feedbackSensor = FeedbackSensor.kPrimaryEncoder;
         else feedbackSensor = FeedbackSensor.kAbsoluteEncoder;
 
         config.closedLoop.feedbackSensor(feedbackSensor);
