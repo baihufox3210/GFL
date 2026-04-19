@@ -3,6 +3,7 @@ package com.GFL.lib.hardware.config;
 public class MotorConfig {
     public enum NeutralMode {BRAKE, COAST}
     public enum SensorSource {INTERNAL, ENCODER_PORT}
+    public enum SensorMode {REMOTE, FUSED, SYNC}
 
     public Integer statorCurrentLimit = null;
     public Integer supplyCurrentLimit = null;
@@ -32,7 +33,8 @@ public class MotorConfig {
 
     public static class EncoderConfig {
         public SensorSource sensorSource = SensorSource.INTERNAL;
-        
+        public SensorMode sensorMode = SensorMode.REMOTE;
+
         public boolean inverted = false;
         
         public double zeroOffset = 0.0;
@@ -131,6 +133,11 @@ public class MotorConfig {
 
     public MotorConfig setSensorSource(SensorSource sensorSource) {
         this.encoderConfig.sensorSource = sensorSource;
+        return this;
+    }
+
+    public MotorConfig setSensorMode(SensorMode sensorMode) {
+        this.encoderConfig.sensorMode = sensorMode;
         return this;
     }
 
