@@ -2,7 +2,7 @@ package com.GFL.lib.hardware.config;
 
 public class MotorConfig {
     public enum NeutralMode {BRAKE, COAST}
-    public enum SensorSource {INTERNAL, ENCODER_PORT}
+    public enum SensorSource {INTERNAL, ENCODER_PORT, REMOTE}
     public enum SensorMode {REMOTE, FUSED, SYNC}
 
     public Integer statorCurrentLimit = null;
@@ -32,6 +32,8 @@ public class MotorConfig {
     }
 
     public static class EncoderConfig {
+        public int remoteSensorID = -1;
+        
         public SensorSource sensorSource = SensorSource.INTERNAL;
         public SensorMode sensorMode = SensorMode.REMOTE;
 
@@ -41,6 +43,9 @@ public class MotorConfig {
 
         public double positionConversionFactor = 1.0;
         public double velocityConversionFactor = 1.0;
+
+        public double rotorToSensorRatio = 1.0;
+        public double sensorToMechanismRatio = 1.0;
     }
 
     public final PIDConfig pidConfig = new PIDConfig();
