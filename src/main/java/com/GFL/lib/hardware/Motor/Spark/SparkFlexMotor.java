@@ -1,6 +1,7 @@
 package com.GFL.lib.hardware.Motor.Spark;
 
 import com.GFL.lib.Factory.MotorFactory.MotorModel;
+import com.GFL.lib.hardware.Encoder.CANCoder.CANCoderEncoder;
 import com.GFL.lib.hardware.Encoder.Spark.SparkFlexAbsoluteEncoder;
 import com.GFL.lib.hardware.Encoder.Spark.SparkFlexRelativeEncoder;
 import com.GFL.lib.hardware.config.MotorConfig;
@@ -8,6 +9,7 @@ import com.GFL.lib.hardware.config.MotorConfig.NeutralMode;
 import com.GFL.lib.hardware.config.MotorConfig.SensorSource;
 import com.GFL.lib.hardware.interfaces.GenericEncoder;
 import com.GFL.lib.hardware.interfaces.GenericMotor;
+import com.ctre.phoenix6.hardware.CANcoder;
 import com.revrobotics.PersistMode;
 import com.revrobotics.ResetMode;
 import com.revrobotics.spark.FeedbackSensor;
@@ -36,7 +38,8 @@ public class SparkFlexMotor implements GenericMotor {
         motor = new SparkFlex(id, MotorType.kBrushless);
         closedLoopController = motor.getClosedLoopController();
 
-        if(motorConfig.encoderConfig.sensorSource == SensorSource.INTERNAL) encoder = new SparkFlexRelativeEncoder(motor);
+        if(motorConfig.encoderConfig.sensorSource == SensorSource.REMOTE) encoder = new CANCoderEncoder(new CANcoder(motorConfig.encoderConfig.remoteSensorID));
+        else if(motorConfig.encoderConfig.sensorSource == SensorSource.INTERNAL) encoder = new SparkFlexRelativeEncoder(motor);
         else encoder = new SparkFlexAbsoluteEncoder(motor);
     }
 
