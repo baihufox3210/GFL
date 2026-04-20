@@ -1,0 +1,18 @@
+{
+  "fileName": "GFL.json",
+  "name": "GFL",
+  "version": "1.0.0",
+  "frcYear": "2026",
+  "uuid": "7a6a6f93-57ca-470d-bc4b-1c2846fd1821",
+  "mavenUrls": [
+    "https://jitpack.io"
+  ],
+  "jsonUrl": "https://raw.githubusercontent.com/baihufox3210/GFL/main/vendordep/GFL.json",
+  "javaDependencies": [
+    {
+      "groupId": "com.github.baihufox3210",
+      "artifactId": "GFL",
+      "version": "v1.0.0"
+    }
+  ]
+}
