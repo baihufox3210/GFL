@@ -1,5 +1,6 @@
 package com.GFL.lib.Factory;
 
+import com.GFL.lib.hardware.Gyro.NavX;
 import com.GFL.lib.hardware.Gyro.Pigeon;
 import com.GFL.lib.hardware.config.GyroConfig;
 import com.GFL.lib.hardware.interfaces.GenericGyro;
@@ -11,7 +12,8 @@ public class GyroFactory {
     }
 
     public enum GyroModel {
-        Pigeon(Pigeon::new);
+        Pigeon2(Pigeon::new),
+        NavX2(NavX::new);
 
         public final GyroConstructor constructor;
 

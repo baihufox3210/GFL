@@ -1,5 +1,6 @@
 package com.GFL.lib.hardware.Gyro;
 
+import com.GFL.lib.hardware.config.GyroConfig;
 import com.GFL.lib.hardware.interfaces.GenericGyro;
 import com.studica.frc.AHRS;
 import com.studica.frc.AHRS.NavXComType;
@@ -11,9 +12,9 @@ public class NavX implements GenericGyro {
 
     private final boolean inverted;
 
-    public NavX(int id, boolean inverted) {
+    public NavX(int id, GyroConfig gyroConfig) {
         this.gyro = new AHRS(NavXComType.kMXP_SPI);
-        this.inverted = inverted;
+        this.inverted = gyroConfig.inverted;
     }
 
     @Override
