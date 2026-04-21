@@ -1,7 +1,7 @@
 {
     "fileName": "GFL.json",
     "name": "GFL",
-    "version": "v1.0.0",
+    "version": "v1.0.1",
     "frcYear": "2026",
     "uuid": "7a6a6f93-57ca-470d-bc4b-1c2846fd1821",
     "mavenUrls": [
@@ -12,7 +12,7 @@
         {
             "groupId": "com.github.baihufox3210",
             "artifactId": "GFL",
-            "version": "v1.0.0"
+            "version": "v1.0.1"
         }
     ],
     "cppDependencies": [],
