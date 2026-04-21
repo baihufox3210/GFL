@@ -72,10 +72,11 @@ public class SparkFlexMotor implements GenericMotor {
         );
 
         config.closedLoop.apply(
-            new FeedForwardConfig()
-                .kS(motorConfig.pidConfig.kS)
-                .kV(motorConfig.pidConfig.kV)
-                .kA(motorConfig.pidConfig.kA)
+            new FeedForwardConfig().sva(
+                motorConfig.pidConfig.kS,
+                motorConfig.pidConfig.kV,
+                motorConfig.pidConfig.kA
+            )
         );
 
         FeedbackSensor feedbackSensor;
