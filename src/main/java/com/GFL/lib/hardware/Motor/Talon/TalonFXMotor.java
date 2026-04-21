@@ -100,6 +100,15 @@ public class TalonFXMotor implements GenericMotor {
                 .withMotionMagicAcceleration(motorConfig.motionConfig.maxAcceleration)
         );
 
+        if(motorConfig.motionConfig.enableWrap) {
+            config.SoftwareLimitSwitch
+                .withReverseSoftLimitEnable(true)
+                .withForwardSoftLimitEnable(true)
+                .withReverseSoftLimitThreshold(motorConfig.motionConfig.wrapMin)
+                .withForwardSoftLimitThreshold(motorConfig.motionConfig.wrapMax);
+
+        }
+
         config.Feedback
             .withRotorToSensorRatio(motorConfig.encoderConfig.rotorToSensorRatio)
             .withSensorToMechanismRatio(motorConfig.encoderConfig.sensorToMechanismRatio);

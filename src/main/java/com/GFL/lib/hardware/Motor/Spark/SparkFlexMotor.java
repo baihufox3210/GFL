@@ -79,6 +79,15 @@ public class SparkFlexMotor implements GenericMotor {
             )
         );
 
+        if(motorConfig.motionConfig.enableWrap) {
+            config.closedLoop
+                .positionWrappingEnabled(true)
+                .positionWrappingInputRange(
+                    motorConfig.motionConfig.wrapMin,
+                    motorConfig.motionConfig.wrapMax
+                );
+        }
+
         FeedbackSensor feedbackSensor;
 
         if(motorConfig.encoderConfig.sensorSource == SensorSource.INTERNAL) feedbackSensor = FeedbackSensor.kPrimaryEncoder;
