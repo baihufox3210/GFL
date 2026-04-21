@@ -1,10 +1,11 @@
 plugins {
     id "java-library"
+    id "maven-publish"
     id "edu.wpi.first.GradleRIO" version "2026.2.1"
 }
 
-group = "com.github.baihufox3210"
-version = "1.0.1"
+group = "com.github.baihufox3210.gfl"
+version = "1.0.0"
 
 java {
     withSourcesJar()
@@ -22,6 +23,25 @@ dependencies {
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'gfl'
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/baihufox3210/GFL") 
+            credentials {
+                username = "baihufox3210"
+                password = findProperty("gpr.token") ?: System.getenv("GITHUB_PAT")
+            }
+        }
+    }
 }
 
 jar {
