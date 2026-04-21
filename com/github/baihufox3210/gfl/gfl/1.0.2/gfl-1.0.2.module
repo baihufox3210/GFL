@@ -1,0 +1,80 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.baihufox3210.gfl",
+    "module": "gfl",
+    "version": "1.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.11"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "gfl-1.0.2.jar",
+          "url": "gfl-1.0.2.jar",
+          "size": 25784,
+          "sha512": "1f66c2fce7af846695771f28883af2d96e683b93f2fb634f6c6e6de8c82caabfe52b08006234aa2136c4595014b196a3a29dece2a8df7da6263007dcbf2861e0",
+          "sha256": "fb4024a3cc04ef6d9a23db437c5e3548b8ef19c70bd43af9887b714baec4c7c8",
+          "sha1": "77942f140aeb103be415dee4b59214eb2e210958",
+          "md5": "e534d7ff59759583f629caadf1fe2f00"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gfl-1.0.2.jar",
+          "url": "gfl-1.0.2.jar",
+          "size": 25784,
+          "sha512": "1f66c2fce7af846695771f28883af2d96e683b93f2fb634f6c6e6de8c82caabfe52b08006234aa2136c4595014b196a3a29dece2a8df7da6263007dcbf2861e0",
+          "sha256": "fb4024a3cc04ef6d9a23db437c5e3548b8ef19c70bd43af9887b714baec4c7c8",
+          "sha1": "77942f140aeb103be415dee4b59214eb2e210958",
+          "md5": "e534d7ff59759583f629caadf1fe2f00"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "gfl-1.0.2-sources.jar",
+          "url": "gfl-1.0.2-sources.jar",
+          "size": 11290,
+          "sha512": "8d08a7f466cc90998c4539c4dc5ccc7f43be213e48f8806a91f608d7a077107d79619219a823587ec839c3d4b887c635286c3f53b06cd701ce5bea79171c2275",
+          "sha256": "8b85e27f2e0ec3673f6cbe909376673a874250542a5645a74d2da134e8413cb2",
+          "sha1": "670975295080dbb3c7f6aec3b8ae76f3a67416d1",
+          "md5": "2cae441214d78b25de23667828efeea0"
+        }
+      ]
+    }
+  ]
+}
