@@ -1,0 +1,19 @@
+{
+    "fileName": "GFL.json",
+    "name": "GFL",
+    "version": "1.1.0",
+    "frcYear": "2026",
+    "uuid": "7a6a6f93-57ca-470d-bc4b-1c2846fd1821",
+    "mavenUrls": [
+        "https://baihufox3210.github.io/GFL/"
+    ],
+    "javaDependencies": [
+        {
+            "groupId": "com.github.baihufox3210.gfl",
+            "artifactId": "gfl",
+            "version": "1.1.0"
+        }
+    ],
+    "cppDependencies": [],
+    "jniDependencies": []
+}
