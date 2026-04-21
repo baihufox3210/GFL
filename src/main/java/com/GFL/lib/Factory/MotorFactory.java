@@ -2,6 +2,7 @@ package com.GFL.lib.Factory;
 
 import com.GFL.lib.hardware.Motor.Spark.SparkFlexMotor;
 import com.GFL.lib.hardware.Motor.Spark.SparkMaxMotor;
+import com.GFL.lib.hardware.Motor.Talon.TalonFXMotor;
 import com.GFL.lib.hardware.config.MotorConfig;
 import com.GFL.lib.hardware.interfaces.GenericMotor;
 
@@ -14,7 +15,8 @@ public class MotorFactory {
     public enum MotorModel {
         Neo550(20, 20, SparkMaxMotor::new),
         Neo(40, 44, SparkMaxMotor::new),
-        NeoVortex(40, 44, SparkFlexMotor::new),;
+        NeoVortex(40, 44, SparkFlexMotor::new),
+        Krakenx60(40, 44, TalonFXMotor::new);
 
         public final int defaultStatorCurrentLimit;
         public final int defaultSupplyCurrentLimit;
