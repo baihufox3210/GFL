@@ -1,38 +1,47 @@
 plugins {
-    id 'java-library'
-    id 'maven-publish'
+    id "java-library"
+    id "maven-publish"
+    id "edu.wpi.first.GradleRIO" version "2026.2.1"
 }
 
-group = 'com.github.baihufox3210'
-version = '1.2.0'
+group = "com.github.baihufox3210"
+version = "1.2.0"
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
 
 repositories {
     mavenCentral()
-    
-    maven { url 'https://jitpack.io' }
-    maven { url 'https://frcmaven.wpi.edu/artifactory/release' }
-    maven { url 'https://maven.ctr-electronics.com/release' }
-    maven { url 'https://software-metadata.revrobotics.com/maven/release' }
 }
 
 dependencies {
-    implementation 'edu.wpi.first.wpilibj:wpilibj-java:2026.+'
-    implementation 'edu.wpi.first.wpiunits:wpiunits-java:2026.+'
+    compileOnly wpi.java.deps.wpilib()
+    compileOnly wpi.java.vendor.java()
 
-    implementation 'com.ctre.phoenix6:wpiapi-java:26.+'
-    implementation 'com.revrobotics.frc:REVLib-java:2026.+'
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 publishing {
     publications {
         mavenJava(MavenPublication) {
+            artifactId = 'GFL'
             from components.java
         }
+    }
+    repositories {
+        maven {
+            url = uri("")
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes["Implementation-Title"] = "GFL Library"
+        attributes["Implementation-Version"] = project.version
     }
 }
