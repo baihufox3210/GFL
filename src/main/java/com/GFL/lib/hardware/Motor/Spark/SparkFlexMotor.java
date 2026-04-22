@@ -98,7 +98,6 @@ public class SparkFlexMotor implements GenericMotor {
         config.closedLoop.apply(motionConfig);
 
         config.encoder
-            .inverted(motorConfig.encoderConfig.inverted)
             .positionConversionFactor(motorConfig.encoderConfig.positionConversionFactor)
             .velocityConversionFactor(motorConfig.encoderConfig.velocityConversionFactor);
 
