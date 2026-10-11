@@ -28,10 +28,10 @@
           "name": "gfl-2.0.4.jar",
           "url": "gfl-2.0.4.jar",
           "size": 31182,
-          "sha512": "2d5bd56b5e169325cd7042f199c6c9111f2ab03384dd542abc7b05f2c7763732ba4325c161031d5322f7082ea108244c8280557511c14ff60b0a841e7605227f",
-          "sha256": "e9f616349181ab5844ac883f01569d427a2060d9c573727000d103ab8e4d0f35",
-          "sha1": "f0b1865b2b8fe733e1ad3c8083d39ccdf658e3dd",
-          "md5": "e0939364290163b04fb754294f1c762f"
+          "sha512": "dabee40121352fb7def2c06b1e0ca5c1d55fdfeec5345a3612e429335836087b6d9d8705570747842065d069bb0af60338fd083b4dcaae366d72c46850d376e4",
+          "sha256": "985b9d445ecab7a43d41968162299740dd158bc2c108332ce08b725634a37ff8",
+          "sha1": "33a83fbe66dc8d5dad13b85c7d4db1df26f27996",
+          "md5": "a9c27151e5d421dbbf8aad9cf128d107"
         }
       ]
     },
@@ -49,10 +49,10 @@
           "name": "gfl-2.0.4.jar",
           "url": "gfl-2.0.4.jar",
           "size": 31182,
-          "sha512": "2d5bd56b5e169325cd7042f199c6c9111f2ab03384dd542abc7b05f2c7763732ba4325c161031d5322f7082ea108244c8280557511c14ff60b0a841e7605227f",
-          "sha256": "e9f616349181ab5844ac883f01569d427a2060d9c573727000d103ab8e4d0f35",
-          "sha1": "f0b1865b2b8fe733e1ad3c8083d39ccdf658e3dd",
-          "md5": "e0939364290163b04fb754294f1c762f"
+          "sha512": "dabee40121352fb7def2c06b1e0ca5c1d55fdfeec5345a3612e429335836087b6d9d8705570747842065d069bb0af60338fd083b4dcaae366d72c46850d376e4",
+          "sha256": "985b9d445ecab7a43d41968162299740dd158bc2c108332ce08b725634a37ff8",
+          "sha1": "33a83fbe66dc8d5dad13b85c7d4db1df26f27996",
+          "md5": "a9c27151e5d421dbbf8aad9cf128d107"
         }
       ]
     },
@@ -69,10 +69,10 @@
           "name": "gfl-2.0.4-sources.jar",
           "url": "gfl-2.0.4-sources.jar",
           "size": 13695,
-          "sha512": "4b356cfca350e6ba72636abb0b22b839d8c687101df8cf29fb93636fdd31f5078425ada518ca8b8c30fb0ab1f00d0a5d318b51381ae22a90de28652dea443cbc",
-          "sha256": "f0d99ee41dfcf86b55cc4080bf8cfd08e5243c367eed2bcb6d61512efb5aaadf",
-          "sha1": "02c91635d74a10f2913397947553c06ff42f9023",
-          "md5": "b0cc1c80982fcde3ff42225da37d8919"
+          "sha512": "f2aa7cbbdfadefbb61d2f76f33581e44fd41dec9d7a16999b1ad7145f752e2d4efa493591e1923b0c0c2a1fa311b29dad4430fa7275d05a1cadaf6eedf3918f8",
+          "sha256": "42a1eb4470e6f7d26361264d858f0a8235feaea41310f5cb1397cd4e3c295874",
+          "sha1": "b04921f6ab7fc9798827bb6aa8f23ae4d540bdbb",
+          "md5": "a64a7ebc3ec7a22e0eed1fb2621eebc4"
         }
       ]
     }
